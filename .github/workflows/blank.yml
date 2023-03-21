@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.event.issue.pull_request && github.event.comment.body == '/deployStaging' }}
+    if: ${{ github.event.comment.body == '/deployStaging' }}
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
